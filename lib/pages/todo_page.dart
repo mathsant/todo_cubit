@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:todo_cubit/widgets/create_todo.dart';
+import 'package:todo_cubit/widgets/search_and_filter_todo.dart';
 import 'package:todo_cubit/widgets/todo_header.dart';
 
 class TodoPage extends StatelessWidget {
@@ -12,7 +14,18 @@ class TodoPage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsetsGeometry.symmetric(horizontal: 20, vertical: 40),
-            child: Column(children: [TodoHeader()]),
+            child: Column(
+              children: [
+                TodoHeader(),
+                SizedBox(height: 10),
+                CreateTodo(),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Divider(color: Colors.black),
+                ),
+                SearchAndFilterTodo(),
+              ],
+            ),
           ),
         ),
       ),
