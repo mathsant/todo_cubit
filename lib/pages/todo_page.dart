@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:todo_cubit/widgets/create_todo.dart';
 import 'package:todo_cubit/widgets/search_and_filter_todo.dart';
+import 'package:todo_cubit/widgets/show_todos.dart';
 import 'package:todo_cubit/widgets/todo_header.dart';
 
 class TodoPage extends StatelessWidget {
@@ -24,6 +25,7 @@ class TodoPage extends StatelessWidget {
                   child: Divider(color: Colors.black),
                 ),
                 SearchAndFilterTodo(),
+                ShowTodos(),
               ],
             ),
           ),
